@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Started</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="game.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="container-custom">
+        <p id="game-message"></p>
+        <script>
+            // Function to parse query parameters from the URL
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Get the player name from the URL
+            const playerName = getQueryParam('playerName');
+
+            // Update the content of the <p> tag with the player name
+            const gameMessage = document.getElementById('game-message');
+            gameMessage.innerText = `${playerName}, Game Loading...`;
+        </script>
+    </div>
+
+    
+    
+</body>
+</html>

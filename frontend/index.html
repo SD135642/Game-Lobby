@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="container-custom">
+        <div id="headerGameLabel">
+            <text>Shadow of the Ancients</text>
+        </div>
+
+        <div id="initialScreen">
+            <input type="text" id="playerName" placeholder="Enter Your Name" maxlength="20" class="form-control">
+            <button class="btn btn-custom ml-2" onclick="checkName()">Submit</button>
+        </div>
+    
+    
+        
+        <div id="mainContainer">
+            <div class="col-md-4">
+                <div class="section">
+                    <div class="left-align">
+                        <div id="custom-lobby-label"> Lobby: <span id="myLobbyId" class="monospace"> You haven't joined a lobby yet </span></div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="title-lobby-messages">Lobbies: </div>
+                    <div id="emptyLobbiesList" class="monospace">Lobbies list empty</div>
+                    <div id="lobbiesList" class="monospace">
+                    </div>
+                </div>
+                <div class="section">
+                    <button id="createLobbyButton" class="btn btn-custom">Create a New Lobby</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-8">
+                <div class="section">
+                    <div class="right-align">
+                        <div id="custom-text"><span id="playerNameDisplay"></span></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="title-lobby-messages">My Lobby Messages:</div>
+                    <div id="lobbyMessages" style="overflow-y: auto; height: 450px; border: 1px solid rgb(255, 255, 255);">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+   
+    <script src="frontend.js"></script>
+</body>
+</html>
